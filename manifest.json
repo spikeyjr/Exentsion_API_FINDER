@@ -1,24 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "Security Scout (Firefox)",
-  "version": "1.2",
+  "name": "Security Scout Pro",
+  "version": "1.5",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "action": {
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "security-scout@yourdomain.com"
-    }
-  }
+  "background": { "scripts": ["background.js"] },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["content.js"] }],
+  "browser_specific_settings": { "gecko": { "id": "scout@winthrop-student.edu" } }
 }

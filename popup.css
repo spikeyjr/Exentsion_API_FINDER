@@ -1,46 +1,47 @@
 body {
-  width: 350px; /* Slightly wider to fit long keys */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 380px;
+  font-family: 'Segoe UI', sans-serif;
   padding: 15px;
   background-color: #f9f9f9;
 }
 
-h3 { color: #333; margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+h3 { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+h4 { margin: 15px 0 8px 0; color: #333; font-size: 16px; border-bottom: 1px solid #ddd; }
 
 button {
   width: 100%;
-  padding: 12px;
-  background-color: #007bff;
+  padding: 10px;
+  background-color: #0056b3;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 8px;
-  transition: background 0.2s;
 }
 
-button:hover { background-color: #0056b3; }
+.secondary-btn { background-color: #28a745; }
 
-/* Different color for the PDF button */
-.secondary-btn {
-  background-color: #28a745;
-}
-
-.secondary-btn:hover {
-  background-color: #218838;
-}
-
-#results { margin-top: 15px; font-size: 13px; }
-
-.result-group {
-  margin-bottom: 12px;
+/* Security Risk Items */
+.risk-item {
+  border-left: 4px solid #dc3545;
+  background: white;
   padding: 10px;
-  background: #fff;
-  border-left: 4px solid #007bff;
+  margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.type-label { font-weight: bold; color: #555; display: block; margin-bottom: 6px; text-transform: uppercase; font-size: 11px; }
-.match-item { word-break: break-all; color: #d63384; font-family: 'Courier New', monospace; font-size: 12px; line-height: 1.4; }
-.placeholder { color: #888; text-align: center; font-style: italic; }
+.risk-title { font-weight: bold; display: block; margin-bottom: 4px; }
+.risk-data { font-family: monospace; font-size: 12px; word-break: break-all; color: #555; }
+
+/* Tech Stack Badges */
+.stack-container { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+
+.badge-tech {
+  background: #e3f2fd;
+  color: #0d47a1;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  border: 1px solid #bbdefb;
+}

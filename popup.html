@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="popup.css">
+  <style>
+    body { width: 380px; font-family: sans-serif; padding: 15px; background: #f9f9f9; }
+    h4 { border-bottom: 1px solid #ddd; margin: 15px 0 5px; }
+    button { width: 100%; padding: 10px; margin-bottom: 5px; cursor: pointer; font-weight: bold; }
+    .btn-green { background: #28a745; color: white; border: none; }
+    .btn-gray { background: #6c757d; color: white; border: none; }
+    .risk-item { border-left: 4px solid #dc3545; background: #fff; padding: 8px; margin-bottom: 8px; font-size: 12px; }
+    .badge { background: #e3f2fd; color: #0d47a1; padding: 3px 6px; border-radius: 4px; font-size: 11px; display: inline-block; margin: 2px; }
+  </style>
 </head>
 <body>
-  <h3>Security Scout</h3>
+  <h3>Security Scout Pro</h3>
+  <button id="scanBtn">Full Reconnaissance Scan</button>
+  <button id="reportBtn" class="btn-green" style="display: none;">Save as PDF Report</button>
+  <button id="txtBtn" class="btn-gray" style="display: none;">Download as .TXT</button>
   
-  <div class="controls">
-    <button id="scanBtn">Scan Current Page</button>
-    <button id="reportBtn" class="secondary-btn" style="display: none;">Generate PDF Report</button>
-    <button id="clearBtn" style="background-color: #6c757d; display: none;">Clear Results</button>
-  </div>
-  
-  <div id="results">
-    <p class="placeholder">Click scan to analyze the page.</p>
-  </div>
-
+  <div id="results"><p>Click scan to analyze the site.</p></div>
   <script src="popup.js"></script>
 </body>
 </html>
