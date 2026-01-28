@@ -1,47 +1,87 @@
 body {
-  width: 380px;
-  font-family: 'Segoe UI', sans-serif;
+  width: 400px;
+  height: 500px; /* Fixed height to allow scrolling */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: #f3e5f5; /* Light Purple Background */
+  overflow-y: auto; /* Enables vertical scrolling */
 }
 
-h3 { margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 5px; }
-h4 { margin: 15px 0 8px 0; color: #333; font-size: 16px; border-bottom: 1px solid #ddd; }
+h3 {
+  color: #4a148c; /* Dark Purple Text */
+  margin-top: 0;
+  border-bottom: 2px solid #ce93d8;
+  padding-bottom: 10px;
+}
 
+h4 {
+  margin: 15px 0 5px;
+  color: #6a1b9a;
+  border-bottom: 1px solid #e1bee7;
+  padding-bottom: 2px;
+}
+
+/* Button Styling */
 button {
   width: 100%;
-  padding: 10px;
-  background-color: #0056b3;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
+  padding: 12px;
   margin-bottom: 8px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-.secondary-btn { background-color: #28a745; }
+#scanBtn { background-color: #7b1fa2; color: white; } /* Purple Button */
+#scanBtn:hover { background-color: #6a1b9a; }
 
-/* Security Risk Items */
+.btn-secondary { background-color: #8e24aa; color: white; }
+.btn-txt { background-color: #607d8b; color: white; }
+
+/* Findings Box Styling */
 .risk-item {
-  border-left: 4px solid #dc3545;
   background: white;
+  border-left: 5px solid #d50000; /* Red for danger */
   padding: 10px;
   margin-bottom: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  word-break: break-all;
+  font-size: 13px;
 }
 
-.risk-title { font-weight: bold; display: block; margin-bottom: 4px; }
-.risk-data { font-family: monospace; font-size: 12px; word-break: break-all; color: #555; }
+.risk-title {
+  font-weight: bold;
+  color: #c62828;
+  display: block;
+  margin-bottom: 4px;
+}
 
-/* Tech Stack Badges */
-.stack-container { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+.risk-value {
+  font-family: monospace;
+  background: #fce4ec;
+  padding: 4px;
+  border-radius: 3px;
+  display: block;
+}
 
-.badge-tech {
-  background: #e3f2fd;
-  color: #0d47a1;
-  padding: 5px 10px;
+/* Cookie Styling */
+.cookie-box {
+  background: white;
+  border-left: 5px solid #ffa000; /* Amber for cookies */
+  padding: 8px;
+  margin-bottom: 5px;
   border-radius: 4px;
   font-size: 12px;
-  border: 1px solid #bbdefb;
+}
+
+.badge {
+  background: #e1bee7;
+  color: #4a148c;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  margin-right: 4px;
+  display: inline-block;
 }
